@@ -14687,7 +14687,7 @@ INSERT INTO `manutencoes` (`veiculo_id`, `data_entrada`, `data_saida`, `tipo`, `
 (119, '2025-07-20', '2025-07-22', 'Pneus', 'Troca e alinhamento de pneus', 2070.00),
 (120, '2025-09-09', '2025-09-11', 'Ar-condicionado', 'Higienizacao e revisao do ar-condicionado', 335.00);
 
--- Views de apoio para os agentes do Langflow
+-- Views de apoio para consultas e análises
 CREATE OR REPLACE VIEW vw_faturamento_mensal AS
 SELECT DATE_FORMAT(l.retirada_em,'%Y-%m') AS mes,
        COUNT(*) AS quantidade_locacoes, SUM(l.valor_total) AS faturamento_bruto

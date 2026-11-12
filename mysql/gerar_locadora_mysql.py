@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Gera um banco MySQL 8 ficticio e coerente de uma locadora de veiculos.
-Uso: pip install Faker; python gerar_locadora.py
+Uso: pip install -r requirements.txt; python mysql/gerar_locadora_mysql.py
 """
 from faker import Faker
 from datetime import date, datetime, timedelta
@@ -201,7 +201,7 @@ for v in vehicles:
             ('Corretiva','Reparo mecanico geral',rng.randint(450,3200))])
         maint.append((vid,d,d+timedelta(days=rng.randint(1,3)),typ,descr,money(cost)))
 
-views='''-- Views de apoio para os agentes do Langflow
+views='''-- Views de apoio para consultas e análises
 CREATE OR REPLACE VIEW vw_faturamento_mensal AS
 SELECT DATE_FORMAT(l.retirada_em,'%Y-%m') AS mes,
        COUNT(*) AS quantidade_locacoes, SUM(l.valor_total) AS faturamento_bruto

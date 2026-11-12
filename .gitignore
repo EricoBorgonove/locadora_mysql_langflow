@@ -1,0 +1,11 @@
+# Credenciais locais
+senha.txt
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
