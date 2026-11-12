@@ -45,10 +45,6 @@ python postgresql/gerar_locadora_postgresql.py --saida postgresql/locadora_veicu
 
 Os geradores aceitam `--clientes`, `--veiculos`, `--semente` e `--saida`.
 
-## Segurança
-
-Não versione senhas ou arquivos de configuração locais. O arquivo `senha.txt` e arquivos `.env` são ignorados pelo Git.
-
 ## Licença
 
 Conteúdo destinado a uso educacional e demonstrativo.
